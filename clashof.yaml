@@ -830,4 +830,4 @@ rules:
 - DST-PORT,443,Proxy
 - SRC-PORT,7777,Proxy 
 - GEOIP,ID,Rule
-- MATCH,Others
+- MATCH,Proxy
