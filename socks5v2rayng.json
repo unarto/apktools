@@ -1,0 +1,112 @@
+{
+  "dns": {
+    "hosts": {
+      "domain:googleapis.cn":
+"googleapis.com"
+    },
+    "servers": [
+      "1.1.1.1"
+    ]
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true
+      },
+      "tag": "socks"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "userLevel": 8
+      },
+      "tag": "http"
+    }
+  ],
+  "log": {
+    "loglevel": "none"
+  },
+  "outbounds": [
+    {
+      "mux": {
+        "concurrency": 0,
+        "enabled": false
+      },
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "id-socks5.woiden.net",
+            "level": 8,
+            "method": "auto",
+            "port": 443,
+            "users": [
+             {
+                 "level": 8,
+                 "pass": "ukiee",
+                 "user": "woiden_ukiee"
+                }
+             ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "skipCertVerify": true,
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": true,
+          "serverName": "igamecj.com"
+        }
+      },
+      "tag": "proxy"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": []
+  },
+  "stats": {}
+}
