@@ -45,8 +45,10 @@ dns:
 proxies:
  - {"name":"Trojan","type":"trojan","server":"sg1.vless.co","port":443,"password":"fastssh.com","udp":true,"skip-cert-verify":true,"sni":"cdn.codmwest.com"}
  - {"name":"Vmess","type":"vmess","server":"sg1-v2ray.proxylite-vpn.me","port":443,"uuid":"7d97ea51-2639-4a18-8f88-90dd6ee4be5b","alterId":64,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true,"servername":"cdn.codmwest.com","network":"ws","ws-path":"/proxylite","ws-headers":{"Host":"sg1-v2ray.proxylite-vpn.me"}}
- - {"name":"Ssr","type":"ssr","server":"sg6-socks.jagoanssh.com","port":8388,"cipher":"aes-256-cfb","password":"R3gz6WXbNz","protocol":"auth_chain_a","protocol-param":"","obfs":"tls1.2_ticket_auth","obfs-param":"www.codmwest.com"}
- - {"name":"Ss","type":"ss","server":"ss.sg.sshmax.net","port":1443,"cipher":"chacha20-ietf-poly1305","password":"7vUWYuYaBQdi","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"cdn.codmwest.com"}}
+ - {"name":"tiktok","type":"ssr","server":"51.79.222.99","port":443,"cipher":"aes-256-ctr","password":"bypasser2020qwerty","protocol":"origin","protocol-param":"","obfs":"tls1.2_ticket_auth","obfs-param":"p16.tiktokcdn.com"}
+ - {"name":"game","type":"ssr","server":"51.79.222.99","port":443,"cipher":"aes-256-ctr","password":"bypasser2020qwerty","protocol":"origin","protocol-param":"","obfs":"tls1.2_ticket_auth","obfs-param":"www.pubgmobile.com"}
+ - {"name":"edu","type":"ssr","server":"51.79.222.99","port":443,"cipher":"aes-256-ctr","password":"bypasser2020qwerty","protocol":"origin","protocol-param":"","obfs":"tls1.2_ticket_auth","obfs-param":"meet.google.com"}
+- {"name":"Ss","type":"ss","server":"ss.sg.sshmax.net","port":1443,"cipher":"chacha20-ietf-poly1305","password":"7vUWYuYaBQdi","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"cdn.codmwest.com"}}
 proxy-groups:
 -
   name: Proxy
@@ -54,7 +56,9 @@ proxy-groups:
   proxies:
     - Trojan
     - Vmess
-    - Ssr
+    - tiktok
+    - game
+    - edu
     - Ss
 -
   name: Rule
