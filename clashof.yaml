@@ -48,7 +48,7 @@ proxies:
  - {"name":"tiktok","type":"ssr","server":"51.79.222.99","port":443,"cipher":"aes-256-ctr","password":"bypasser2020qwerty","protocol":"origin","protocol-param":"","obfs":"tls1.2_ticket_auth","obfs-param":"p16.tiktokcdn.com"}
  - {"name":"game","type":"ssr","server":"51.79.222.99","port":443,"cipher":"aes-256-ctr","password":"bypasser2020qwerty","protocol":"origin","protocol-param":"","obfs":"tls1.2_ticket_auth","obfs-param":"www.pubgmobile.com"}
  - {"name":"edu","type":"ssr","server":"51.79.222.99","port":443,"cipher":"aes-256-ctr","password":"bypasser2020qwerty","protocol":"origin","protocol-param":"","obfs":"tls1.2_ticket_auth","obfs-param":"meet.google.com"}
-- {"name":"Ss","type":"ss","server":"ss.sg.sshmax.net","port":1443,"cipher":"chacha20-ietf-poly1305","password":"7vUWYuYaBQdi","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"cdn.codmwest.com"}}
+ - {"name":"Ss","type":"ss","server":"ss.sg.sshmax.net","port":1443,"cipher":"chacha20-ietf-poly1305","password":"7vUWYuYaBQdi","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"cdn.codmwest.com"}}
 proxy-groups:
 -
   name: Proxy
